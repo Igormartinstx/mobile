@@ -1,0 +1,254 @@
+/* ====== RESET BÁSICO ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #4f46e5; /* Roxo bonito */
+  --primary-hover: #4338ca;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --secondary: #6b7280;
+  --bg: #f9fafb;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --text: #111827;
+  --text-light: #6b7280;
+  --radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* ====== LAYOUT ====== */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 960px;
+  padding: 2rem;
+}
+
+/* ====== HEADER ====== */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ====== CAIXA DO TÍTULO ====== */
+.title-box {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 2rem;
+}
+
+.title-box h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ====== BOTÕES ====== */
+.btn {
+  border-radius: var(--radius);
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.btn.primary1 {
+  border-radius: var(--radius);
+   border: none; 
+   padding: 0.6em 1.2em;
+   font-size: 0.95rem; 
+   font-weight: 500; 
+   cursor: pointer; 
+   margin-right: -400px;
+   transition: background 0.2s ease-in-out;
+  /* Flutuando pra fora */
+  position: absolute;
+
+  top: -115px;   /* sobe um pouco */
+  right: -20px; /* sai um pouco pra fora */
+  transition: background 0.2s, transform 0.2s;
+}
+
+.floating-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn.primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn.primary1 {
+  background: var(--primary);
+  color: #fff;
+}
+.btn.primary1:hover {
+  background: var(--primary-hover);
+}
+
+
+
+
+.btn.secondary {
+  background: var(--secondary);
+  color: #fff;
+}
+.btn.secondary:hover {
+  background: #4b5563;
+}
+
+.btn.danger {
+  background: var(--danger);
+  color: #fff;
+}
+.btn.danger:hover {
+  background: var(--danger-hover);
+}
+
+/* ====== BOTÃO CIRCULAR ====== */
+
+
+.btn:hover {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+/* ====== TABELA ====== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.table th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.table tr:hover {
+  background: #f9fafb;
+}
+
+.table td {
+  color: var(--text-light);
+}
+
+/* ====== MODAL ====== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+/* ====== FORM ====== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.form input {
+  padding: 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 0.3rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+/* ====== FOOTER ====== */
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.topbar h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}

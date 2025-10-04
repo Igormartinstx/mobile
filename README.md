@@ -1,2 +1,0 @@
-# mobile
-Aula de Mobile
